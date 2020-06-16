@@ -2,32 +2,16 @@
 /* $more-info-color: #9c323f;
 $more-info-color-hover: #b23847;
 $more-info-color-light: #dc7481; */
-/* @font-face {
-    font-family: 'Scala Sans Caps';
-    src: url('https://raw.githubusercontent.com/linkisensei/roll20-character-sheets/master/fonts/ScalaSans-Caps.woff2') format('woff2'),
-    url('https://raw.githubusercontent.com/linkisensei/roll20-character-sheets/master/fonts/ScalaSans-Caps.woff') format('woff');
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Scala Sans';
-    src: url('https://raw.githubusercontent.com/linkisensei/roll20-character-sheets/master/fonts/ScalaSans-BoldCn.woff2') format('woff2'),
-    url('https://raw.githubusercontent.com/linkisensei/roll20-character-sheets/master/fonts/ScalaSans-BoldCn.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-} */
 @font-face {
   font-family: 'Scala Sans Caps';
-  src: url("ScalaSans-Caps.ttf") format("truetype");
+  src: url("https://trpg.orcnroll.com/fichat20/fonts/ScalaSans-Caps.woff2") format("woff2"), url("https://trpg.orcnroll.com/fichat20/fonts/ScalaSans-Caps.woff") format("woff");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Scala Sans';
-  src: url("ScalaSans-Regular.ttf") format("truetype");
+  src: url("https://trpg.orcnroll.com/fichat20/fonts/ScalaSans-BoldCn.woff2") format("woff2"), url("https://trpg.orcnroll.com/fichat20/fonts/ScalaSans-BoldCn.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;

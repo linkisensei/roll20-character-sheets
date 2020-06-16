@@ -296,7 +296,7 @@
                         <div class="small-title">Outros</div>
                         
                         <div>
-                            <input name="attr_defesatotal" disabled maxlength="3" type="text" spellcheck="false" value="(10+@{armaduradefesa1}+@{armaduradefesa2} + @{defesaoutros} + @{defesadestreza} * @{des_mod})">
+                            <input name="attr_defesatotal" disabled maxlength="3" type="text" spellcheck="false" value="10+@{armaduradefesa1}+@{armaduradefesa2} + @{defesaoutros} + @{defesadestreza} * @{des_mod}">
                         </div>
                         <div class="signal">=</div>
                         <div class="big-signal">10</div>
@@ -307,11 +307,11 @@
                         </select>
                         <div class="signal">+</div>
                         <div>
-                            <input name="attr_defesaarmadura" type="text" spellcheck="false" maxlength="2" value="(@{armaduradefesa1})" disabled>
+                            <input name="attr_defesaarmadura" type="text" spellcheck="false" maxlength="2" value="@{armaduradefesa1}" disabled="true">
                         </div>
                         <div class="signal">+</div>
                         <div>
-                            <input name="attr_defesaescudo" type="text" spellcheck="false" maxlength="2" value="(@{armaduradefesa2})" disabled>
+                            <input name="attr_defesaescudo" type="text" spellcheck="false" maxlength="2" value="@{armaduradefesa2}" disabled="true">
                         </div>
                         <div class="signal">+</div>
                         <div>
@@ -657,7 +657,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total first" name="attr_acrobaciatotal" maxlength="2" type="text" spellcheck="false" title="@{acrobaciatotal}" value="(@{metade_do_nivel} + @{acrobaciaatributo2} + @{acrobaciatreino} + @{acrobaciaoutros}) -1 * @{penalidades_armadura} -1 * @{penalidades_armadura_carga}" disabled>
+                        <input class="total first" name="attr_acrobaciatotal" maxlength="2" type="text" spellcheck="false" title="@{acrobaciatotal}" value="@{metade_do_nivel} + @{acrobaciaatributo2} + @{acrobaciatreino} + @{acrobaciaoutros} -1 * @{penalidades_armadura} -1 * @{penalidades_armadura_carga}" disabled="true">
                         <div class="signal">=</div>
                         <!-- <input name="attr_acrobacianivel" type="text" spellcheck="false" value="@{metade_do_nivel}" disabled="true">
                         <div class="signal">+</div> -->
@@ -670,7 +670,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_acrobaciatreino" type="text" spellcheck="false" maxlength="3" title="@{acrobaciatreino}" value="(@{bonus_treino}*@{acrobacia_treinada})" disabled>
+                        <input name="attr_acrobaciatreino" type="text" spellcheck="false" maxlength="3" title="@{acrobaciatreino}" value="@{bonus_treino}*@{acrobacia_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_acrobaciaoutros" maxlength="3" type="text" spellcheck="false" title="@{acrobaciaoutros}" value="0">
                         <!-- Adestramento -->
@@ -686,7 +686,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_adestramentototal" maxlength="2" type="text" spellcheck="false" title="@{adestramentototal}" value="(@{metade_do_nivel} + @{adestramentoatributo2} + @{adestramentotreino} + @{adestramentooutros})" disabled>
+                        <input class="total last" name="attr_adestramentototal" maxlength="2" type="text" spellcheck="false" title="@{adestramentototal}" value="@{metade_do_nivel} + @{adestramentoatributo2} + @{adestramentotreino} + @{adestramentooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_adestramentoatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -697,7 +697,7 @@
                             <option value="@{car_mod}" selected>CAR*</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_adestramentotreino" type="text" spellcheck="false" maxlength="3" title="@{adestramentotreino}" value="(@{bonus_treino}*@{adestramento_treinada})" disabled="true">
+                        <input name="attr_adestramentotreino" type="text" spellcheck="false" maxlength="3" title="@{adestramentotreino}" value="@{bonus_treino}*@{adestramento_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_adestramentooutros" maxlength="3" type="text" spellcheck="false" title="@{adestramentooutros}" value="0">
 
@@ -714,7 +714,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_atletismototal" maxlength="2" type="text" spellcheck="false" title="@{atletismototal}" value="(@{metade_do_nivel} + @{atletismoatributo2} + @{atletismotreino} + @{atletismooutros})" disabled>
+                        <input class="total last" name="attr_atletismototal" maxlength="2" type="text" spellcheck="false" title="@{atletismototal}" value="@{metade_do_nivel} + @{atletismoatributo2} + @{atletismotreino} + @{atletismooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_atletismoatributo2">
                             <option value="@{for_mod}" selected>FOR*</option>
@@ -725,7 +725,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_atletismotreino" type="text" spellcheck="false" maxlength="3" title="@{atletismotreino}" value="(@{bonus_treino}*@{atletismo_treinada})" disabled="true">
+                        <input name="attr_atletismotreino" type="text" spellcheck="false" maxlength="3" title="@{atletismotreino}" value="@{bonus_treino}*@{atletismo_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_atletismooutros" maxlength="3" type="text" spellcheck="false" title="@{atletismooutros}" value="0">
 
@@ -742,7 +742,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_atuacaototal" maxlength="2" type="text" spellcheck="false" title="@{atuacaototal}" value="(@{metade_do_nivel} + @{atuacaoatributo2} + @{atuacaotreino} + @{atuacaooutros})" disabled>
+                        <input class="total last" name="attr_atuacaototal" maxlength="2" type="text" spellcheck="false" title="@{atuacaototal}" value="@{metade_do_nivel} + @{atuacaoatributo2} + @{atuacaotreino} + @{atuacaooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_atuacaoatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -753,7 +753,7 @@
                             <option value="@{car_mod}" selected>CAR*</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_atuacaotreino" type="text" spellcheck="false" maxlength="3" title="@{atuacaotreino}" value="(@{bonus_treino}*@{atuacao_treinada})" disabled="true">
+                        <input name="attr_atuacaotreino" type="text" spellcheck="false" maxlength="3" title="@{atuacaotreino}" value="@{bonus_treino}*@{atuacao_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_atuacaooutros" maxlength="3" type="text" spellcheck="false" title="@{atuacaooutros}" value="0">
 
@@ -770,7 +770,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_cavalgartotal" maxlength="2" type="text" spellcheck="false" title="@{cavalgartotal}" value="(@{metade_do_nivel} + @{cavalgaratributo2} + @{cavalgartreino} + @{cavalgaroutros})" disabled>
+                        <input class="total last" name="attr_cavalgartotal" maxlength="2" type="text" spellcheck="false" title="@{cavalgartotal}" value="@{metade_do_nivel} + @{cavalgaratributo2} + @{cavalgartreino} + @{cavalgaroutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_cavalgaratributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -781,7 +781,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_cavalgartreino" type="text" spellcheck="false" maxlength="3" title="@{cavalgartreino}" value="(@{bonus_treino}*@{cavalgar_treinada})" disabled="true">
+                        <input name="attr_cavalgartreino" type="text" spellcheck="false" maxlength="3" title="@{cavalgartreino}" value="@{bonus_treino}*@{cavalgar_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_cavalgaroutros" maxlength="3" type="text" spellcheck="false" title="@{cavalgaroutros}" value="0">
 
@@ -798,7 +798,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_conhecimentototal" maxlength="2" type="text" spellcheck="false" title="@{conhecimentototal}" value="(@{metade_do_nivel} + @{conhecimentoatributo2} + @{conhecimentotreino} + @{conhecimentooutros})" disabled>
+                        <input class="total last" name="attr_conhecimentototal" maxlength="2" type="text" spellcheck="false" title="@{conhecimentototal}" value="@{metade_do_nivel} + @{conhecimentoatributo2} + @{conhecimentotreino} + @{conhecimentooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_conhecimentoatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -809,7 +809,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_conhecimentotreino" type="text" spellcheck="false" maxlength="3" title="@{conhecimentotreino}" value="(@{bonus_treino}*@{conhecimento_treinada})" disabled="true">
+                        <input name="attr_conhecimentotreino" type="text" spellcheck="false" maxlength="3" title="@{conhecimentotreino}" value="@{bonus_treino}*@{conhecimento_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_conhecimentooutros" maxlength="3" type="text" spellcheck="false" title="@{conhecimentooutros}" value="0">
 
@@ -826,7 +826,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_curatotal" maxlength="2" type="text" spellcheck="false" title="@{curatotal}" value="(@{metade_do_nivel} + @{curaatributo2} + @{curatreino} + @{curaoutros})" disabled>
+                        <input class="total last" name="attr_curatotal" maxlength="2" type="text" spellcheck="false" title="@{curatotal}" value="@{metade_do_nivel} + @{curaatributo2} + @{curatreino} + @{curaoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_curaatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -837,7 +837,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_curatreino" type="text" spellcheck="false" maxlength="3" title="@{curatreino}" value="(@{bonus_treino}*@{cura_treinada})" disabled="true">
+                        <input name="attr_curatreino" type="text" spellcheck="false" maxlength="3" title="@{curatreino}" value="@{bonus_treino}*@{cura_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_curaoutros" maxlength="3" type="text" spellcheck="false" title="@{curaoutros}" value="0">
 
@@ -854,7 +854,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_diplomaciatotal" maxlength="2" type="text" spellcheck="false" title="@{diplomaciatotal}" value="(@{metade_do_nivel} + @{diplomaciaatributo2} + @{diplomaciatreino} + @{diplomaciaoutros})" disabled>
+                        <input class="total last" name="attr_diplomaciatotal" maxlength="2" type="text" spellcheck="false" title="@{diplomaciatotal}" value="@{metade_do_nivel} + @{diplomaciaatributo2} + @{diplomaciatreino} + @{diplomaciaoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_diplomaciaatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -865,7 +865,7 @@
                             <option value="@{car_mod}" selected>CAR*</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_diplomaciatreino" type="text" spellcheck="false" maxlength="3" title="@{diplomaciatreino}" value="(@{bonus_treino}*@{diplomacia_treinada})" disabled="true">
+                        <input name="attr_diplomaciatreino" type="text" spellcheck="false" maxlength="3" title="@{diplomaciatreino}" value="@{bonus_treino}*@{diplomacia_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_diplomaciaoutros" maxlength="3" type="text" spellcheck="false" title="@{diplomaciaoutros}" value="0">
 
@@ -882,7 +882,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_enganacaototal" maxlength="2" type="text" spellcheck="false" title="@{enganacaototal}" value="(@{metade_do_nivel} + @{enganacaoatributo2} + @{enganacaotreino} + @{enganacaooutros})" disabled>
+                        <input class="total last" name="attr_enganacaototal" maxlength="2" type="text" spellcheck="false" title="@{enganacaototal}" value="@{metade_do_nivel} + @{enganacaoatributo2} + @{enganacaotreino} + @{enganacaooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_enganacaoatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -893,7 +893,7 @@
                             <option value="@{car_mod}" selected>CAR*</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_enganacaotreino" type="text" spellcheck="false" maxlength="3" title="@{enganacaotreino}" value="(@{bonus_treino}*@{enganacao_treinada})" disabled="true">
+                        <input name="attr_enganacaotreino" type="text" spellcheck="false" maxlength="3" title="@{enganacaotreino}" value="@{bonus_treino}*@{enganacao_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_enganacaooutros" maxlength="3" type="text" spellcheck="false" title="@{enganacaooutros}" value="0">
 
@@ -910,7 +910,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_fortitudetotal" maxlength="2" type="text" spellcheck="false" title="@{fortitudetotal}" value="(@{metade_do_nivel} + @{fortitudeatributo2} + @{fortitudetreino} + @{fortitudeoutros})" disabled>
+                        <input class="total last" name="attr_fortitudetotal" maxlength="2" type="text" spellcheck="false" title="@{fortitudetotal}" value="@{metade_do_nivel} + @{fortitudeatributo2} + @{fortitudetreino} + @{fortitudeoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_fortitudeatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -921,7 +921,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_fortitudetreino" type="text" spellcheck="false" maxlength="3" title="@{fortitudetreino}" value="(@{bonus_treino}*@{fortitude_treinada})" disabled="true">
+                        <input name="attr_fortitudetreino" type="text" spellcheck="false" maxlength="3" title="@{fortitudetreino}" value="@{bonus_treino}*@{fortitude_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_fortitudeoutros" maxlength="3" type="text" spellcheck="false" title="@{fortitudeoutros}" value="0">
 
@@ -938,7 +938,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_furtividadetotal" maxlength="2" type="text" spellcheck="false" title="@{furtividadetotal}" value="(@{metade_do_nivel} + @{furtividadeatributo2} + @{furtividadetreino} + @{furtividadeoutros} -1 * @{penalidades_armadura} -1 * @{penalidades_armadura_carga})" disabled>
+                        <input class="total last" name="attr_furtividadetotal" maxlength="2" type="text" spellcheck="false" title="@{furtividadetotal}" value="@{metade_do_nivel} + @{furtividadeatributo2} + @{furtividadetreino} + @{furtividadeoutros} -1 * @{penalidades_armadura} -1 * @{penalidades_armadura_carga}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_furtividadeatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -949,7 +949,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_furtividadetreino" type="text" spellcheck="false" maxlength="3" title="@{furtividadetreino}" value="(@{bonus_treino}*@{furtividade_treinada})" disabled="true">
+                        <input name="attr_furtividadetreino" type="text" spellcheck="false" maxlength="3" title="@{furtividadetreino}" value="@{bonus_treino}*@{furtividade_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_furtividadeoutros" maxlength="3" type="text" spellcheck="false" title="@{furtividadeoutros}" value="0">
 
@@ -966,7 +966,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_guerratotal" maxlength="2" type="text" spellcheck="false" title="@{guerratotal}" value="(@{metade_do_nivel} + @{guerraatributo2} + @{guerratreino} + @{guerraoutros})" disabled>
+                        <input class="total last" name="attr_guerratotal" maxlength="2" type="text" spellcheck="false" title="@{guerratotal}" value="@{metade_do_nivel} + @{guerraatributo2} + @{guerratreino} + @{guerraoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_guerraatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -977,7 +977,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_guerratreino" type="text" spellcheck="false" maxlength="3" title="@{guerratreino}" value="(@{bonus_treino}*@{guerra_treinada})" disabled="true">
+                        <input name="attr_guerratreino" type="text" spellcheck="false" maxlength="3" title="@{guerratreino}" value="@{bonus_treino}*@{guerra_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_guerraoutros" maxlength="3" type="text" spellcheck="false" title="@{guerraoutros}" value="0">
 
@@ -995,7 +995,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_iniciativatotal" maxlength="2" type="text" spellcheck="false" title="@{iniciativatotal}" value="(@{metade_do_nivel} + @{iniciativaatributo2} + @{iniciativatreino} + @{iniciativaoutros})" disabled>
+                        <input class="total last" name="attr_iniciativatotal" maxlength="2" type="text" spellcheck="false" title="@{iniciativatotal}" value="@{metade_do_nivel} + @{iniciativaatributo2} + @{iniciativatreino} + @{iniciativaoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_iniciativaatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1006,7 +1006,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_iniciativatreino" type="text" spellcheck="false" maxlength="3" title="@{iniciativatreino}" value="(@{bonus_treino}*@{iniciativa_treinada})" disabled="true">
+                        <input name="attr_iniciativatreino" type="text" spellcheck="false" maxlength="3" title="@{iniciativatreino}" value="@{bonus_treino}*@{iniciativa_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_iniciativaoutros" maxlength="3" type="text" spellcheck="false" title="@{iniciativaoutros}" value="0">
 
@@ -1023,7 +1023,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_intimidacaototal" maxlength="2" type="text" spellcheck="false" title="@{intimidacaototal}" value="(@{metade_do_nivel} + @{intimidacaoatributo2} + @{intimidacaotreino} + @{intimidacaooutros})" disabled>
+                        <input class="total last" name="attr_intimidacaototal" maxlength="2" type="text" spellcheck="false" title="@{intimidacaototal}" value="@{metade_do_nivel} + @{intimidacaoatributo2} + @{intimidacaotreino} + @{intimidacaooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_intimidacaoatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1034,7 +1034,7 @@
                             <option value="@{car_mod}" selected>CAR*</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_intimidacaotreino" type="text" spellcheck="false" maxlength="3" title="@{intimidacaotreino}" value="(@{bonus_treino}*@{intimidacao_treinada})" disabled="true">
+                        <input name="attr_intimidacaotreino" type="text" spellcheck="false" maxlength="3" title="@{intimidacaotreino}" value="@{bonus_treino}*@{intimidacao_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_intimidacaooutros" maxlength="3" type="text" spellcheck="false" title="@{intimidacaooutros}" value="0">
 
@@ -1051,7 +1051,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_intuicaototal" maxlength="2" type="text" spellcheck="false" title="@{intuicaototal}" value="(@{metade_do_nivel} + @{intuicaoatributo2} + @{intuicaotreino} + @{intuicaooutros})" disabled>
+                        <input class="total last" name="attr_intuicaototal" maxlength="2" type="text" spellcheck="false" title="@{intuicaototal}" value="@{metade_do_nivel} + @{intuicaoatributo2} + @{intuicaotreino} + @{intuicaooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_intuicaoatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1062,7 +1062,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_intuicaotreino" type="text" spellcheck="false" maxlength="3" title="@{intuicaotreino}" value="(@{bonus_treino}*@{intuicao_treinada})" disabled="true">
+                        <input name="attr_intuicaotreino" type="text" spellcheck="false" maxlength="3" title="@{intuicaotreino}" value="@{bonus_treino}*@{intuicao_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_intuicaooutros" maxlength="3" type="text" spellcheck="false" title="@{intuicaooutros}" value="0">
 
@@ -1079,7 +1079,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_investigacaototal" maxlength="2" type="text" spellcheck="false" title="@{investigacaototal}" value="(@{metade_do_nivel} + @{investigacaoatributo2} + @{investigacaotreino} + @{investigacaooutros})" disabled>
+                        <input class="total last" name="attr_investigacaototal" maxlength="2" type="text" spellcheck="false" title="@{investigacaototal}" value="@{metade_do_nivel} + @{investigacaoatributo2} + @{investigacaotreino} + @{investigacaooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_investigacaoatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1090,7 +1090,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_investigacaotreino" type="text" spellcheck="false" maxlength="3" title="@{investigacaotreino}" value="(@{bonus_treino}*@{investigacao_treinada})" disabled="true">
+                        <input name="attr_investigacaotreino" type="text" spellcheck="false" maxlength="3" title="@{investigacaotreino}" value="@{bonus_treino}*@{investigacao_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_investigacaooutros" maxlength="3" type="text" spellcheck="false" title="@{investigacaooutros}" value="0">
 
@@ -1107,7 +1107,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_jogatinatotal" maxlength="2" type="text" spellcheck="false" title="@{jogatinatotal}" value="(@{metade_do_nivel} + @{jogatinaatributo2} + @{jogatinatreino} + @{jogatinaoutros})" disabled>
+                        <input class="total last" name="attr_jogatinatotal" maxlength="2" type="text" spellcheck="false" title="@{jogatinatotal}" value="@{metade_do_nivel} + @{jogatinaatributo2} + @{jogatinatreino} + @{jogatinaoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_jogatinaatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1118,7 +1118,7 @@
                             <option value="@{car_mod}" selected>CAR*</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_jogatinatreino" type="text" spellcheck="false" maxlength="3" title="@{jogatinatreino}" value="(@{bonus_treino}*@{jogatina_treinada})" disabled="true">
+                        <input name="attr_jogatinatreino" type="text" spellcheck="false" maxlength="3" title="@{jogatinatreino}" value="@{bonus_treino}*@{jogatina_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_jogatinaoutros" maxlength="3" type="text" spellcheck="false" title="@{jogatinaoutros}" value="0">
 
@@ -1135,7 +1135,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_ladinagemtotal" maxlength="2" type="text" spellcheck="false" title="@{ladinagemtotal}" value="(@{metade_do_nivel} + @{ladinagematributo2} + @{ladinagemtreino} + @{ladinagemoutros} -1 * @{penalidades_armadura} -1 * @{penalidades_armadura_carga})" disabled>
+                        <input class="total last" name="attr_ladinagemtotal" maxlength="2" type="text" spellcheck="false" title="@{ladinagemtotal}" value="@{metade_do_nivel} + @{ladinagematributo2} + @{ladinagemtreino} + @{ladinagemoutros} -1 * @{penalidades_armadura} -1 * @{penalidades_armadura_carga}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_ladinagematributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1146,7 +1146,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_ladinagemtreino" type="text" spellcheck="false" maxlength="3" title="@{ladinagemtreino}" value="(@{bonus_treino}*@{ladinagem_treinada})" disabled="true">
+                        <input name="attr_ladinagemtreino" type="text" spellcheck="false" maxlength="3" title="@{ladinagemtreino}" value="@{bonus_treino}*@{ladinagem_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_ladinagemoutros" maxlength="3" type="text" spellcheck="false" title="@{ladinagemoutros}" value="0">
 
@@ -1163,7 +1163,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_lutatotal" maxlength="2" type="text" spellcheck="false" title="@{lutatotal}" value="(@{metade_do_nivel} + @{lutaatributo2} + @{lutatreino} + @{lutaoutros})" disabled>
+                        <input class="total last" name="attr_lutatotal" maxlength="2" type="text" spellcheck="false" title="@{lutatotal}" value="@{metade_do_nivel} + @{lutaatributo2} + @{lutatreino} + @{lutaoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_lutaatributo2">
                             <option value="@{for_mod}" selected>FOR*</option>
@@ -1171,10 +1171,10 @@
                             <option value="@{con_mod}">CON</option>
                             <option value="@{int_mod}">INT</option>
                             <option value="@{sab_mod}">SAB</option>
-                            <option value="@{car_mod}" selected>CAR</option>
+                            <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_lutatreino" type="text" spellcheck="false" maxlength="3" title="@{lutatreino}" value="(@{bonus_treino}*@{luta_treinada})" disabled="true">
+                        <input name="attr_lutatreino" type="text" spellcheck="false" maxlength="3" title="@{lutatreino}" value="@{bonus_treino}*@{luta_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_lutaoutros" maxlength="3" type="text" spellcheck="false" title="@{lutaoutros}" value="0">
 
@@ -1191,7 +1191,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_misticismototal" maxlength="2" type="text" spellcheck="false" title="@{misticismototal}" value="(@{metade_do_nivel} + @{misticismoatributo2} + @{misticismotreino} + @{misticismooutros})" disabled>
+                        <input class="total last" name="attr_misticismototal" maxlength="2" type="text" spellcheck="false" title="@{misticismototal}" value="@{metade_do_nivel} + @{misticismoatributo2} + @{misticismotreino} + @{misticismooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_misticismoatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1202,7 +1202,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_misticismotreino" type="text" spellcheck="false" maxlength="3" title="@{misticismotreino}" value="(@{bonus_treino}*@{misticismo_treinada})" disabled="true">
+                        <input name="attr_misticismotreino" type="text" spellcheck="false" maxlength="3" title="@{misticismotreino}" value="@{bonus_treino}*@{misticismo_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_misticismooutros" maxlength="3" type="text" spellcheck="false" title="@{misticismooutros}" value="0">
 
@@ -1219,7 +1219,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_nobrezatotal" maxlength="2" type="text" spellcheck="false" title="@{nobrezatotal}" value="(@{metade_do_nivel} + @{nobrezaatributo2} + @{nobrezatreino} + @{nobrezaoutros})" disabled>
+                        <input class="total last" name="attr_nobrezatotal" maxlength="2" type="text" spellcheck="false" title="@{nobrezatotal}" value="@{metade_do_nivel} + @{nobrezaatributo2} + @{nobrezatreino} + @{nobrezaoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_nobrezaatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1230,7 +1230,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_nobrezatreino" type="text" spellcheck="false" maxlength="3" title="@{nobrezatreino}" value="(@{bonus_treino}*@{nobreza_treinada})" disabled="true">
+                        <input name="attr_nobrezatreino" type="text" spellcheck="false" maxlength="3" title="@{nobrezatreino}" value="@{bonus_treino}*@{nobreza_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_nobrezaoutros" maxlength="3" type="text" spellcheck="false" title="@{nobrezaoutros}" value="0">
 
@@ -1248,7 +1248,7 @@
                             <input class="nome-oficio" name="attr_oficionome" type="text" spellcheck="false">
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_oficiototal" maxlength="2" type="text" spellcheck="false" title="@{oficiototal}" value="(@{metade_do_nivel} + @{oficioatributo2} + @{oficiotreino} + @{oficiooutros})" disabled>
+                        <input class="total last" name="attr_oficiototal" maxlength="2" type="text" spellcheck="false" title="@{oficiototal}" value="@{metade_do_nivel} + @{oficioatributo2} + @{oficiotreino} + @{oficiooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_oficioatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1259,7 +1259,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_oficiotreino" type="text" spellcheck="false" maxlength="3" title="@{oficiotreino}" value="(@{bonus_treino}*@{oficio_treinada})" disabled="true">
+                        <input name="attr_oficiotreino" type="text" spellcheck="false" maxlength="3" title="@{oficiotreino}" value="@{bonus_treino}*@{oficio_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_oficiooutros" maxlength="3" type="text" spellcheck="false" title="@{oficiooutros}" value="0">
 
@@ -1277,7 +1277,7 @@
                             <input class="nome-oficio" name="attr_oficio2nome" type="text" spellcheck="false">
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_oficio2total" maxlength="2" type="text" spellcheck="false" title="@{oficio2total}" value="(@{metade_do_nivel} + @{oficio2atributo2} + @{oficio2treino} + @{oficio2outros})" disabled>
+                        <input class="total last" name="attr_oficio2total" maxlength="2" type="text" spellcheck="false" title="@{oficio2total}" value="@{metade_do_nivel} + @{oficio2atributo2} + @{oficio2treino} + @{oficio2outros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_oficio2atributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1288,7 +1288,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_oficio2treino" type="text" spellcheck="false" maxlength="3" title="@{oficio2treino}" value="(@{bonus_treino}*@{oficio2_treinada})" disabled="true">
+                        <input name="attr_oficio2treino" type="text" spellcheck="false" maxlength="3" title="@{oficio2treino}" value="@{bonus_treino}*@{oficio2_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_oficio2outros" maxlength="3" type="text" spellcheck="false" title="@{oficio2outros}" value="0">
 
@@ -1305,7 +1305,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_percepcaototal" maxlength="2" type="text" spellcheck="false" title="@{percepcaototal}" value="(@{metade_do_nivel} + @{percepcaoatributo2} + @{percepcaotreino} + @{percepcaooutros})" disabled>
+                        <input class="total last" name="attr_percepcaototal" maxlength="2" type="text" spellcheck="false" title="@{percepcaototal}" value="@{metade_do_nivel} + @{percepcaoatributo2} + @{percepcaotreino} + @{percepcaooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_percepcaoatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1316,7 +1316,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_percepcaotreino" type="text" spellcheck="false" maxlength="3" title="@{percepcaotreino}" value="(@{bonus_treino}*@{percepcao_treinada})" disabled="true">
+                        <input name="attr_percepcaotreino" type="text" spellcheck="false" maxlength="3" title="@{percepcaotreino}" value="@{bonus_treino}*@{percepcao_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_percepcaooutros" maxlength="3" type="text" spellcheck="false" title="@{percepcaooutros}" value="0">
 
@@ -1333,7 +1333,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_pilotagemtotal" maxlength="2" type="text" spellcheck="false" title="@{pilotagemtotal}" value="(@{metade_do_nivel} + @{pilotagematributo2} + @{pilotagemtreino} + @{pilotagemoutros})" disabled>
+                        <input class="total last" name="attr_pilotagemtotal" maxlength="2" type="text" spellcheck="false" title="@{pilotagemtotal}" value="@{metade_do_nivel} + @{pilotagematributo2} + @{pilotagemtreino} + @{pilotagemoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_pilotagematributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1344,7 +1344,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_pilotagemtreino" type="text" spellcheck="false" maxlength="3" title="@{pilotagemtreino}" value="(@{bonus_treino}*@{pilotagem_treinada})" disabled="true">
+                        <input name="attr_pilotagemtreino" type="text" spellcheck="false" maxlength="3" title="@{pilotagemtreino}" value="@{bonus_treino}*@{pilotagem_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_pilotagemoutros" maxlength="3" type="text" spellcheck="false" title="@{pilotagemoutros}" value="0">
                         
@@ -1361,7 +1361,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_pontariatotal" maxlength="2" type="text" spellcheck="false" title="@{pontariatotal}" value="(@{metade_do_nivel} + @{pontariaatributo2} + @{pontariatreino} + @{pontariaoutros})" disabled>
+                        <input class="total last" name="attr_pontariatotal" maxlength="2" type="text" spellcheck="false" title="@{pontariatotal}" value="@{metade_do_nivel} + @{pontariaatributo2} + @{pontariatreino} + @{pontariaoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_pontariaatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1372,7 +1372,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_pontariatreino" type="text" spellcheck="false" maxlength="3" title="@{pontariatreino}" value="(@{bonus_treino}*@{pontaria_treinada})" disabled="true">
+                        <input name="attr_pontariatreino" type="text" spellcheck="false" maxlength="3" title="@{pontariatreino}" value="@{bonus_treino}*@{pontaria_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_pontariaoutros" maxlength="3" type="text" spellcheck="false" title="@{pontariaoutros}" value="0">
 
@@ -1389,7 +1389,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_reflexostotal" maxlength="2" type="text" spellcheck="false" title="@{reflexostotal}" value="(@{metade_do_nivel} + @{reflexosatributo2} + @{reflexostreino} + @{reflexosoutros})" disabled>
+                        <input class="total last" name="attr_reflexostotal" maxlength="2" type="text" spellcheck="false" title="@{reflexostotal}" value="@{metade_do_nivel} + @{reflexosatributo2} + @{reflexostreino} + @{reflexosoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_reflexosatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1400,7 +1400,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_reflexostreino" type="text" spellcheck="false" maxlength="3" title="@{reflexostreino}" value="(@{bonus_treino}*@{reflexos_treinada})" disabled="true">
+                        <input name="attr_reflexostreino" type="text" spellcheck="false" maxlength="3" title="@{reflexostreino}" value="@{bonus_treino}*@{reflexos_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_reflexosoutros" maxlength="3" type="text" spellcheck="false" title="@{reflexosoutros}" value="0">
 
@@ -1417,7 +1417,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_religiaototal" maxlength="2" type="text" spellcheck="false" title="@{religiaototal}" value="(@{metade_do_nivel} + @{religiaoatributo2} + @{religiaotreino} + @{religiaooutros})" disabled>
+                        <input class="total last" name="attr_religiaototal" maxlength="2" type="text" spellcheck="false" title="@{religiaototal}" value="@{metade_do_nivel} + @{religiaoatributo2} + @{religiaotreino} + @{religiaooutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_religiaoatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1428,7 +1428,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_religiaotreino" type="text" spellcheck="false" maxlength="3" title="@{religiaotreino}" value="(@{bonus_treino}*@{religiao_treinada})" disabled="true">
+                        <input name="attr_religiaotreino" type="text" spellcheck="false" maxlength="3" title="@{religiaotreino}" value="@{bonus_treino}*@{religiao_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_religiaooutros" maxlength="3" type="text" spellcheck="false" title="@{religiaooutros}" value="0">
 
@@ -1445,7 +1445,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_sobrevivenciatotal" maxlength="2" type="text" spellcheck="false" title="@{sobrevivenciatotal}" value="(@{metade_do_nivel} + @{sobrevivenciaatributo2} + @{sobrevivenciatreino} + @{sobrevivenciaoutros})" disabled>
+                        <input class="total last" name="attr_sobrevivenciatotal" maxlength="2" type="text" spellcheck="false" title="@{sobrevivenciatotal}" value="@{metade_do_nivel} + @{sobrevivenciaatributo2} + @{sobrevivenciatreino} + @{sobrevivenciaoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_sobrevivenciaatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1456,7 +1456,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_sobrevivenciatreino" type="text" spellcheck="false" maxlength="3" title="@{sobrevivenciatreino}" value="(@{bonus_treino}*@{sobrevivencia_treinada})" disabled="true">
+                        <input name="attr_sobrevivenciatreino" type="text" spellcheck="false" maxlength="3" title="@{sobrevivenciatreino}" value="@{bonus_treino}*@{sobrevivencia_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_sobrevivenciaoutros" maxlength="3" type="text" spellcheck="false" title="@{sobrevivenciaoutros}" value="0">
 
@@ -1473,7 +1473,7 @@
                             </button>
                         </div>
                         <div class="signal"></div>
-                        <input class="total last" name="attr_vontadetotal" maxlength="2" type="text" spellcheck="false" title="@{vontadetotal}" value="(@{metade_do_nivel} + @{vontadeatributo2} + @{vontadetreino} + @{vontadeoutros})" disabled>
+                        <input class="total last" name="attr_vontadetotal" maxlength="2" type="text" spellcheck="false" title="@{vontadetotal}" value="@{metade_do_nivel} + @{vontadeatributo2} + @{vontadetreino} + @{vontadeoutros}" disabled="true">
                         <div class="signal">=</div>
                         <select name="attr_vontadeatributo2">
                             <option value="@{for_mod}">FOR</option>
@@ -1484,7 +1484,7 @@
                             <option value="@{car_mod}">CAR</option>
                         </select>
                         <div class="signal">+</div>
-                        <input name="attr_vontadetreino" type="text" spellcheck="false" maxlength="3" title="@{vontadetreino}" value="(@{bonus_treino}*@{vontade_treinada})" disabled="true">
+                        <input name="attr_vontadetreino" type="text" spellcheck="false" maxlength="3" title="@{vontadetreino}" value="@{bonus_treino}*@{vontade_treinada}" disabled="true">
                         <div class="signal">+</div>
                         <input name="attr_vontadeoutros" maxlength="3" type="text" spellcheck="false" title="@{vontadeoutros}" value="0">
 
@@ -1569,7 +1569,7 @@
     </div>
     <div class="hide-author">
         <input type="text" spellcheck="false" name="attr_created_by_linki" value="">
-        <span>FICHA BY ORC & ROLL</span>
+        <span>FICHA OFICIAL BY ORC & ROLL</span>
     </div>
     
 
@@ -1578,7 +1578,7 @@
 <input type="hidden" name="attr_bonus_treino" value="0" readonly="1">
 <input type="hidden" name="attr_penalidades_armadura" value="0" readonly="1">
 <input type="hidden" name="attr_penalidades_armadura_carga" value="0" readonly="1">
-<input type="hidden" name="attr_metade_do_nivel" value="(floor((@{charnivel})/2))" disabled="true">
+<input type="hidden" name="attr_metade_do_nivel" value="floor(@{charnivel}/2)" disabled="true">
 <!-- <input type="hidden" name="attr_PVS" value="(@{vida} + @{vidatemp})" disabled="true" />
 <input type="hidden" name="attr_PMS" value="(@{mana} + @{manatemp})" disabled="true" /> -->
 </body>
@@ -1843,7 +1843,7 @@
             let multiplicador = parseInt(v.repeating_attacks_multiplicadorcriticoataque);
             let resultado = dano;
 
-            for(let i=0; i < multiplicador - 2; i++){
+            for(let i=0; i < multiplicador - 1; i++){
                 resultado = resultado + " + " + dano;
             }
                          
