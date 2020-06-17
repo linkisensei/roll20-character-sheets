@@ -296,7 +296,7 @@
                         <div class="small-title">Outros</div>
                         
                         <div>
-                            <input name="attr_defesatotal" disabled maxlength="3" type="text" spellcheck="false" value="10+@{armaduradefesa1}+@{armaduradefesa2} + @{defesaoutros} + @{defesadestreza} * @{des_mod}">
+                            <input name="attr_defesatotal" disabled="true" maxlength="3" type="text" spellcheck="false" value="10+@{armaduradefesa1}+@{armaduradefesa2} + @{defesaoutros} + @{defesadestreza} * @{des_mod}">
                         </div>
                         <div class="signal">=</div>
                         <div class="big-signal">10</div>
@@ -1579,8 +1579,8 @@
 <input type="hidden" name="attr_penalidades_armadura" value="0" readonly="1">
 <input type="hidden" name="attr_penalidades_armadura_carga" value="0" readonly="1">
 <input type="hidden" name="attr_metade_do_nivel" value="floor(@{charnivel}/2)" disabled="true">
-<!-- <input type="hidden" name="attr_PVS" value="(@{vida} + @{vidatemp})" disabled="true" />
-<input type="hidden" name="attr_PMS" value="(@{mana} + @{manatemp})" disabled="true" /> -->
+<input type="hidden" name="attr_vida_max" value="(@{vidatotal} + @{vidatemp})" disabled="true" />
+<input type="hidden" name="attr_mana_max" value="(@{manatotal} + @{manatemp})" disabled="true" />
 </body>
 </html>
 
@@ -1730,6 +1730,23 @@
         </div>
     </div>
 </rolltemplate>
+
+
+<rolltemplate class="sheet-rolltemplate-custom">
+    <div class="sheet-rollbox-container">
+        <div class="rollbox">
+            <div class="roll-title">
+                {{name}}
+            </div>
+            <div class="props">
+                {{#allprops() name}}
+                   <div class="content"><b>{{key}}</b> {{value}}</div>
+                {{/allprops() name}}
+            </div>
+        </div>
+    </div>
+</rolltemplate>
+
 
 
 <script type="text/worker">

@@ -2315,3 +2315,127 @@ $more-info-color-light: #d6d6d6;
     }
     
 }
+
+.sheet-rolltemplate-custom{
+    $diameter_corner : 20px;
+    $corner_displacement : -16px; 
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    
+    .sheet-rollbox-container{
+        width: 100%;
+        position: relative;
+        box-sizing: border-box;
+        border: 2px solid black;
+        &::before{
+            position:absolute;
+            content: '';
+            background-color:#d3e5f5;
+            border-top:2px solid transparent;
+            border-right:2px solid #000;
+            border-bottom:2px solid #000;
+            border-left:2px solid transparent;
+            border-radius:50%;
+            width:$diameter_corner;
+            height:$diameter_corner;
+            pointer-events: none;
+            bottom: $corner_displacement;
+            left:$corner_displacement;
+            transform:rotate(-90deg);
+        }
+        &::after{
+            content: '';
+            position:absolute;
+            background-color:#d3e5f5;
+            border-top:2px solid transparent;
+            border-right:2px solid #000;
+            border-bottom:2px solid #000;
+            border-left:2px solid transparent;
+            border-radius:50%;
+            width:$diameter_corner;
+            height:$diameter_corner;
+            pointer-events: none;
+            bottom:$corner_displacement;
+            right:$corner_displacement;
+            transform:rotate(180deg);
+        }
+
+        .sheet-rollbox{
+            padding: 5px;
+            font-family: 'Scala Sans';
+            position: relative;
+            width: 100%;
+            min-height: 40px;
+            display:grid;
+            box-sizing: border-box;
+            grid-template-columns: 1fr;
+            row-gap: 5px;
+            &::before{
+                position:absolute;
+                content: '';
+                background-color:#d3e5f5;
+                border-top:2px solid transparent;
+                border-right:2px solid #000;
+                border-bottom:2px solid #000;
+                border-left:2px solid transparent;
+                border-radius:50%;
+                width:$diameter_corner;
+                height:$diameter_corner;
+                pointer-events: none;
+                top: $corner_displacement;
+                left:$corner_displacement;
+            }
+            &::after{
+                content: '';
+                position:absolute;
+                background-color:#d3e5f5;
+                border-top:2px solid transparent;
+                border-right:2px solid #000;
+                border-bottom:2px solid #000;
+                border-left:2px solid transparent;
+                border-radius:50%;
+                width:$diameter_corner;
+                height:$diameter_corner;
+                pointer-events: none;
+                top:$corner_displacement;
+                right:$corner_displacement;
+                transform:rotate(90deg);
+            }
+
+            .sheet-roll-title{
+                width: 100%;
+                min-height: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .sheet-props{
+                display: grid;
+                grid-template-columns: 1fr;
+                
+                b{
+                    font-family: "Scala Sans Caps";
+                    font-weight: bold!important;
+                }
+                .sheet-content{
+                    font-weight: normal!important;
+                    margin-bottom:2px;
+                }
+            }
+            span{
+                //Impedindo que essas modificações da rolagem afetem macros da descrição.
+                margin: 0;
+                padding: 0 3px;
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-size:13px;
+            }
+        }
+    }
+    
+}
