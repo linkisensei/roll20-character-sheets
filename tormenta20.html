@@ -1579,8 +1579,8 @@
 <input type="hidden" name="attr_penalidades_armadura" value="0" readonly="1">
 <input type="hidden" name="attr_penalidades_armadura_carga" value="0" readonly="1">
 <input type="hidden" name="attr_metade_do_nivel" value="floor(@{charnivel}/2)" disabled="true">
-<input type="hidden" name="attr_vida_max" value="(@{vidatotal} + @{vidatemp})" disabled="true" />
-<input type="hidden" name="attr_mana_max" value="(@{manatotal} + @{manatemp})" disabled="true" />
+<input type="hidden" name="attr_vida_max" value="@{vidatotal} + @{vidatemp}" disabled="true" />
+<input type="hidden" name="attr_mana_max" value="@{manatotal} + @{manatemp}" disabled="true" />
 </body>
 </html>
 
@@ -1738,10 +1738,51 @@
             <div class="roll-title">
                 {{name}}
             </div>
+            {{#theroll}}
+                <div class="props">
+                    <div class="content"><b>{{rollname}}</b> {{theroll}}</div>
+                </div>
+            {{/theroll}}
+            {{#rollWasCrit() theroll}}
+                {{#ifcritical}}
+                    <div class="props">
+                        <div class="content"><b>{{criticalname}}</b> {{ifcritical}}</div>
+                    </div>
+                {{/ifcritical}}
+            {{/rollWasCrit() theroll}}
+            {{#^rollWasCrit() theroll}}
+                {{#ifcriticalerror}}
+                    {{#rollWasFumble() theroll}}
+                        {{#ifcriticalerror}}
+                            <div class="props">
+                                <div class="content"><b>{{criticalname}}</b> {{ifcriticalerror}}</div>
+                            </div>
+                        {{/ifcriticalerror}}
+                    {{/rollWasFumble() theroll}}
+
+                    {{#^rollWasFumble() theroll}}
+                        {{#notcritical}}
+                            <div class="props">
+                                <div class="content"><b>{{criticalname}}</b> {{notcritical}}</div>
+                            </div>
+                        {{/notcritical}}
+                    {{/^rollWasFumble() theroll}}
+                {{/ifcriticalerror}}
+
+                {{#^ifcriticalerror}}
+                    {{#notcritical}}
+                        <div class="props">
+                            <div class="content"><b>{{criticalname}}</b> {{notcritical}}</div>
+                        </div>
+                    {{/notcritical}}
+                {{/^ifcriticalerror}}
+
+
+            {{/^rollWasCrit() theroll}}
             <div class="props">
-                {{#allprops() name}}
+                {{#allprops() name criticalname ifcritical ifcriticalerror notcritical theroll rollname}}
                    <div class="content"><b>{{key}}</b> {{value}}</div>
-                {{/allprops() name}}
+                {{/allprops() name criticalname ifcritical ifcriticalerror notcritical theroll rollname}}
             </div>
         </div>
     </div>
