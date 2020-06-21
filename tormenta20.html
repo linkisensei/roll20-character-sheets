@@ -296,7 +296,7 @@
                         <div class="small-title">Outros</div>
                         
                         <div>
-                            <input name="attr_defesatotal" disabled="true" maxlength="3" type="text" spellcheck="false" value="10+@{armaduradefesa1}+@{armaduradefesa2} + @{defesaoutros} + @{defesadestreza} * @{des_mod}">
+                            <input name="attr_defesafake" disabled="true" value="@{defesatotal}" maxlength="3" type="text" spellcheck="false" title="@{defesatotal}">
                         </div>
                         <div class="signal">=</div>
                         <div class="big-signal">10</div>
@@ -1578,9 +1578,10 @@
 <input type="hidden" name="attr_bonus_treino" value="0" readonly="1">
 <input type="hidden" name="attr_penalidades_armadura" value="0" readonly="1">
 <input type="hidden" name="attr_penalidades_armadura_carga" value="0" readonly="1">
-<input type="hidden" name="attr_metade_do_nivel" value="floor(@{charnivel}/2)" disabled="true">
-<input type="hidden" name="attr_vida_max" value="@{vidatotal} + @{vidatemp}" disabled="true" />
-<input type="hidden" name="attr_mana_max" value="@{manatotal} + @{manatemp}" disabled="true" />
+<input type="hidden" name="attr_metade_do_nivel" value="floor(@{charnivel}/2)">
+<input type="hidden" name="attr_vida_max" value="@{vidatotal} + @{vidatemp}"/>
+<input type="hidden" name="attr_mana_max" value="@{manatotal} + @{manatemp}"/>
+<input name="attr_defesatotal" maxlength="3" type="hidden" spellcheck="false">
 </body>
 </html>
 
@@ -1990,4 +1991,38 @@
         log(idArray.length); // logs number of repeating rows within repeating_foo
       });
     */
+
+
+    //Calculando Defesa Total:
+    on("sheet:opened change:defesadestreza change:armaduradefesa1 change:armaduradefesa2 change:defesaoutros", function(e){
+        getAttrs(["defesadestreza", "armaduradefesa1", "armaduradefesa2", "defesaoutros", "des_mod"], function(v){
+           
+            let total = 10;
+
+            console.error(v);
+
+            //Armadura
+            if(!isNaN(v.armaduradefesa1)){
+                total = total + parseInt(v.armaduradefesa1);
+            }
+            //Escudo
+            if(!isNaN(v.armaduradefesa2)){
+                total = total + parseInt(v.armaduradefesa2);
+            }
+            //Outros
+            if(!isNaN(v.defesaoutros)){
+                total = total + parseInt(v.defesaoutros);
+            }
+            //Mod de Destreza
+            if(!isNaN(v.des_mod) && v.defesadestreza == '1'){
+                total = total + parseInt(v.des_mod);
+            }
+
+            console.error("total final", total);
+
+            setAttrs({
+                "defesatotal": total
+            });
+        }); 
+    });
 </script>
