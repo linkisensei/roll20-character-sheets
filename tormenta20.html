@@ -307,15 +307,15 @@
                         </select>
                         <div class="signal">+</div>
                         <div>
-                            <input name="attr_defesaarmadura" type="text" spellcheck="false" maxlength="2" value="@{armaduradefesa1}" disabled="true">
+                            <input name="attr_defesaarmadura" type="text" spellcheck="false" value="@{armaduradefesa1}" disabled="true">
                         </div>
                         <div class="signal">+</div>
                         <div>
-                            <input name="attr_defesaescudo" type="text" spellcheck="false" maxlength="2" value="@{armaduradefesa2}" disabled="true">
+                            <input name="attr_defesaescudo" type="text" spellcheck="false" value="@{armaduradefesa2}" disabled="true">
                         </div>
                         <div class="signal">+</div>
                         <div>
-                            <input name="attr_defesaoutros" type="text" spellcheck="false" maxlength="2" value="0">
+                            <input name="attr_defesaoutros" type="text" spellcheck="false" value="0">
                         </div>
 
 
@@ -1781,10 +1781,15 @@
 
             {{/^rollWasCrit() theroll}}
             <div class="props">
-                {{#allprops() name criticalname ifcritical ifcriticalerror notcritical theroll rollname}}
+                {{#allprops() name criticalname ifcritical ifcriticalerror description notcritical theroll rollname}}
                    <div class="content"><b>{{key}}</b> {{value}}</div>
-                {{/allprops() name criticalname ifcritical ifcriticalerror notcritical theroll rollname}}
+                {{/allprops() name criticalname ifcritical ifcriticalerror description notcritical theroll rollname}}
             </div>
+            {{#description}}
+                <div class="descricao">
+                    {{description}}
+                </div>
+            {{/description}}
         </div>
     </div>
 </rolltemplate>
