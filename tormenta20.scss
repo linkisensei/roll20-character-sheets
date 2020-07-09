@@ -2418,6 +2418,15 @@ $more-info-color-light: #d6d6d6;
                 text-transform: uppercase;
             }
 
+            .sheet-secondname{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-style: italic;
+            }
+
             .sheet-props{
                 display: grid;
                 grid-template-columns: 1fr;

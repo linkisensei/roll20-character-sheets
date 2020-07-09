@@ -2539,6 +2539,15 @@
   text-transform: uppercase;
 }
 
+.sheet-rolltemplate-custom .sheet-rollbox-container .sheet-rollbox .sheet-secondname {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+}
+
 .sheet-rolltemplate-custom .sheet-rollbox-container .sheet-rollbox .sheet-props {
   display: grid;
   grid-template-columns: 1fr;
