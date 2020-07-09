@@ -1444,7 +1444,7 @@ $more-info-color-light: #d6d6d6;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 11px;
+                font-size: 10px;
                 border: 0;
                 font-weight: bold;
                 text-align: center;
@@ -1893,6 +1893,7 @@ $more-info-color-light: #d6d6d6;
 
         .sheet-rollbox{
             padding: 5px;
+            padding-bottom: 15px;
             font-family: 'PT Sans';
             position: relative;
             width: 100%;
@@ -2003,6 +2004,7 @@ $more-info-color-light: #d6d6d6;
                 padding: 5px;
                 margin: 10px;
                 margin-top:0;
+                margin-bottom:0;
                 background-color: rgb(253, 248, 171);
                 max-height: 400px;
                 overflow-y: auto;

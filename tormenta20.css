@@ -1550,7 +1550,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 11px;
+  font-size: 10px;
   border: 0;
   font-weight: bold;
   text-align: center;
@@ -2005,6 +2005,7 @@
 
 .sheet-rolltemplate-t20-attack .sheet-rollbox-container .sheet-rollbox {
   padding: 5px;
+  padding-bottom: 15px;
   font-family: 'PT Sans';
   position: relative;
   width: 100%;
@@ -2123,6 +2124,7 @@
   padding: 5px;
   margin: 10px;
   margin-top: 0;
+  margin-bottom: 0;
   background-color: #fdf8ab;
   max-height: 400px;
   overflow-y: auto;
